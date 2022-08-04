@@ -5,6 +5,8 @@ This project is my practical assignment for IT Security Course at Swinburne Univ
 
 In this project, trained a Support Vector Machine (SVM) technique to filter spam email message and implement my model on an API written in FastAPI and run on a simple web server using Uvicorn.
 
+A notebook where I visualize the data set and trained the model is on [Google Colab](https://colab.research.google.com/drive/1CMVaStWbFMBAdRODyfH882taOfr9nUzl?authuser=3#scrollTo=WThM9OV-Usgw). You can run this notebook in case there are any problems with the notebook in this repository
+
 ## Libraries used
 
 Data manipulation: [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/)
