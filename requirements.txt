@@ -5,3 +5,4 @@ pandas
 matplotlib
 nltk
 sklearn
+python-multipart
