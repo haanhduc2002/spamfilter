@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  mlapi:
+    image: mlapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 80:80
