@@ -13,8 +13,9 @@
             background-size: 100% 100%;
         }
         textarea {
-            padding: 10px;
-            width: 60vw;
+            padding: 5px;
+            height: 60vh;
+            width: 100%;
             background-color: transparent;
             color: white;
             border: 3px solid #CE433C;
@@ -36,22 +37,61 @@
             font-weight: 700;
         }
     </style>
-    <br>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
+
 <body>
+    <h1 class="mx-auto justify-content-center" style="color: #bfcde0 ; width: 100%; background-color: #050B0F; text-align: center; padding:1%;">SPAM DETECTOR</h1> <br>
     <div class="d-flex">
-        <div class="d-flex flex-column justify-content-center mx-auto">
-            <h1 class="mx-auto" style="color: #bfcde0">Spam filter</h1> <br><br>
-            <h2 class="mx-auto" style="color: #bfcde0">Spam filter</h2> <br><br>
-            <form method="post" >
-                <textarea rows="10" cols="160" type="text" name="message" value=" "  placeholder="Insert your received email content"></textarea> <br><br>
-                <div class="d-flex" >
-                    <input type="submit" value="Check for Spam" class="sbt-btn row mx-auto" >
+        <div class="d-flex flex-column justify-content-center mx-auto" style="width: 100%;">
+            <div class="badge text-wrap mx-auto"  style="width: 60%;">
+                <h2 class="mx-auto" style="color: #bfcde0">What are spam?</h2>
+                <p class="text-md-center fs-5" style="color: #bfcde0">
+                    Spam emails are digital junk sent in bulk that have destructive effects on mail servers and users. They consume memory space, communication bandwidth, and CPU power, causing unpleasant experiences. Spam mail also leads to fraudulence practices, harming individuals and organizations.
+                </p>
+            </div><br><br>
+            <div class="container" style="width: 95%;">
+                <div class="row">
+                    <div class="col-md-auto">
+                        <h2 class="mx-auto" style="color: #bfcde0">Check for spam email content</h2>
+                        <form method="post" >
+                            <textarea rows="10" cols="80" type="text" name="message" value=" "  placeholder="Insert your received email content to check if is a spam emails"></textarea> <br><br>
+                            <div class="d-flex" >
+                                <input type="submit" value="Check for Spam" class="sbt-btn row mx-auto" >
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class= "col" style="width: 100%;">
+                        <div class="text-wrap ">
+                            <h2 class="mx-auto" style="color: #bfcde0">Examples of spam email content</h2>
+                            <h6 class="mx-auto" style="color: #bfcde0">Example 1:</h6>
+                            <p style="color: #bfcde0">
+                                Dear Lucky Winner, Congratulations! You have won a fabulous prize! As a token of our appreciation, we offer you a chance to claim your reward. Just complete a short survey and provide your contact details for reservation purposes. Hurry, limited quantities are available! Claim your prize now: [spammylink.com]
+                                <br>
+                            </p>
+                            <h6 class="mx-auto" style="color: #bfcde0">Example 2:</h6>
+                            <p style="color: #bfcde0">
+                                Dear Valued User,
+                                We regret to inform you that your account needs immediate attention. To avoid suspension, please verify your account information by logging in through the provided link. Failure to comply within 24 hours will lead to permanent account termination. Ensure the safety of your personal data and act now!<br>
+                                Verify your account: [spammylink.com]<br>
+                            </p>
+                            <h6 class="mx-auto" style="color: #bfcde0">Example 3:</h6>
+                            <p style="color: #bfcde0">
+                                Dear Lucky Winner,Congratulations! You have won a fabulous prize! As a token of our appreciation, we are offering you a chance to claim your reward. Just fill out a short survey and provide your contact details for reservation purposes. Hurry, limited quantities available!
+                                Claim your prize now: [spammylink.com]<br>
+                            </p>
+                            <h6 class="mx-auto" style="color: #bfcde0">Example 4:</h6>
+                            <p style="color: #bfcde0">
+                                Dear Friend, I am Mrs. Johnson, a widow who recently inherited a huge sum of money. I need your help to transfer these funds overseas. In return, I am willing to give you a substantial portion of the money. Please reply urgently with your full name, address, and contact information.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
-                
-            </form>
-            <div >
+            </div>
+
+            <div class="d-flex flex-column justify-content-center mx-auto text-wrap" style="width: 60%;">
                 <p style="color: #bfcde0"><b>Content:</b> {{content}}</p>
                 <p style="color: #bfcde0"><b>Result:</b> {{result}}</p>
             </div>
@@ -60,9 +100,10 @@
     </div>
     
 
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
+<footer class=" d-flex justify-content-center mx-auto">
+    <p style="color: #bfcde0">Explore the project on <a href="https://github.com/haanhduc2002/spamfilter">Github</a></p>
+    
+</footer>
 </html>

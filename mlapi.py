@@ -29,6 +29,7 @@ path = os.path.join('model', 'saved_model.pkl')
 with open(path, "rb") as f:
     model_import, cv_import = pickle.load(f)
 
+
 async def handle_message(message): 
   # Step 1: Remove puntuation 
   message1 = [char for char in message if char not in string.punctuation]
@@ -41,7 +42,6 @@ async def handle_message(message):
   word_list = nltk.word_tokenize(message2)
   result = ' '.join([lemmatizer.lemmatize(w) for w in word_list])
   return result.lower() # Lower casing the processed message
-
 
 @app.get('/')
 async def spam_content_form(request: Request):
@@ -56,7 +56,12 @@ async def spam_identification(request: Request ,message: Optional[str] = Form(No
         input = cv_import.transform(array)
         myprediction = model_import.predict(input)
         myprediction = model_import.predict(input)
-        answer = myprediction[0]
+        if myprediction[0] == "spam":
+            answer = "This is a spam email content"
+        elif myprediction[0] == "ham":
+            answer = "This is not a spam email content"
+        else:
+            answer = "There is something not working sorry for this discomfort"
     except Exception as e:
         if message == None:
             answer = "Please enter your content"
